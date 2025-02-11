@@ -36,7 +36,7 @@ import java.util.Locale;
 
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
-import com.rabindradev.compressors.DevCompressor;
+import com.iceteck.silicompressorr.SiliCompressor;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -100,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
             try {
                 boolean b = Boolean.parseBoolean(paths[0]);
                 if (b) {
-                    filePath = DevCompressor.with(mContext).compressVideo(paths[1], paths[2]);
+                    filePath = SiliCompressor.with(mContext).compressVideo(paths[1], paths[2]);
                 } else {
                     Uri videoContentUri = Uri.parse(paths[1]);
-                    filePath = DevCompressor.with(mContext).compressVideo(videoContentUri, paths[2]);
+                    filePath = SiliCompressor.with(mContext).compressVideo(videoContentUri, paths[2]);
                 }
 
 
